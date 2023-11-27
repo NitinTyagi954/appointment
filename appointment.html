@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" type="text/css" href="styles_appointment.css">
+<style>
+    /* styles_appointment.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="date"],
+input[type="time"] {
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        margin: 10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Book an Appointment</h1>
+    </header>
+
+    <section>
+        <form id="appointmentForm" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" name="doctor" required>
+                <option value="dr_smith">Dr. Tony Tony Chopper</option>
+                <option value="dr_jones">Dr. Strange</option>
+                <option value="dr_jones">Dr. Jhatka </option>
+                <option value="dr_jones">Dr. Ahshan Ansari</option>
+                <option value="dr_jones">Dr. Heinz Doofenshmirtz</option>
+                <option value="dr_jones">Dr. Tsunade</option>
+                <!-- Add more doctor options as needed -->
+            </select>
+
+            <label for="specialty">Select Specialty:</label>
+            <select id="specialty" name="specialty" required>
+                <option value="cardiology">Cardiology</option>
+                <option value="pediatrics">Pediatrics</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="orthopedics">Neurology</option>
+                <option value="orthopedics">Gynaecology</option>
+                <!-- Add more specialty options as needed -->
+            </select>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="message">Additional Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            
+            // You can perform form validation here
+            
+            // Display appointment taken message
+            alert('Appointment taken');
+
+            // Redirect to the home page
+            window.location.href = 'index.html';
+        });
+    </script>
+
+</body>
+
+</html>
